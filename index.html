@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>БАКС — барбершоп в Астане · стрижка от 3000 ₸</title>
+<meta name="description" content="Барбершоп «Бакс» в Астане: мужская стрижка от 3000 ₸, детская стрижка, выезд на дом, Wi-Fi. Ежедневно 09:00–24:00 по записи. Рейтинг 4.9 в 2ГИС.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Unbounded:wght@400;700;900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0a; --paper:#fff1d0; --acid:#c8ff00; --red:#ff2e3a; --blue:#1f3bff; --green:#0e6b3a; --gold:#ffc83d;
+  --f-mono:'Rubik Mono One',Impact,sans-serif; --f-head:'Unbounded','Arial Black',sans-serif; --f-body:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--f-body);overflow-x:hidden;line-height:1.5;
+  background-image:radial-gradient(circle at 20% 10%,rgba(255,46,58,.25),transparent 40%),radial-gradient(circle at 85% 30%,rgba(31,59,255,.25),transparent 40%),radial-gradient(circle at 50% 90%,rgba(200,255,0,.12),transparent 45%);
+  background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+a{color:inherit;text-decoration:none}
+@media (pointer:fine){ body{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>✂️</text></svg>") 4 4,auto} a,button{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>💸</text></svg>") 4 4,pointer} }
+
+/* TOP BAR */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(14px,4vw,40px);backdrop-filter:blur(10px);background:rgba(10,10,10,.6);border-bottom:2px solid var(--acid)}
+.logo{font-family:var(--f-mono);font-size:22px;letter-spacing:1px;color:var(--acid)}
+.logo span{color:var(--red)}
+.top nav{display:flex;gap:22px;font-family:var(--f-head);font-size:12px;text-transform:uppercase;font-weight:700}
+.top nav a:hover{color:var(--acid)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-size:11px;font-weight:700;padding:8px 14px;border-radius:99px;border:2px solid var(--paper);text-transform:uppercase}
+.dot{width:10px;height:10px;border-radius:50%;background:#777;box-shadow:0 0 0 0 currentColor}
+.pill.open .dot{background:#2dff6e;animation:pulse 1.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(45,255,110,.7)}100%{box-shadow:0 0 0 14px rgba(45,255,110,0)}}
+@media(max-width:760px){.top nav{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:grid;place-items:center;padding:120px 20px 140px;text-align:center;overflow:hidden}
+.pole{position:absolute;top:0;bottom:0;width:46px;border-left:4px solid var(--paper);border-right:4px solid var(--paper);
+  background:repeating-linear-gradient(-45deg,var(--red) 0 22px,var(--paper) 22px 44px,var(--blue) 44px 66px,var(--paper) 66px 88px);background-size:125px 125px;animation:spin 1.2s linear infinite;opacity:.9}
+.pole.l{left:clamp(6px,3vw,50px)} .pole.r{right:clamp(6px,3vw,50px);animation-direction:reverse}
+@keyframes spin{to{background-position:0 125px}}
+.kicker{display:inline-block;background:var(--acid);color:var(--ink);font-family:var(--f-head);font-weight:900;font-size:clamp(11px,1.6vw,15px);padding:8px 16px;transform:rotate(-3deg);box-shadow:6px 6px 0 var(--red);text-transform:uppercase;margin-bottom:26px}
+h1{font-family:var(--f-mono);font-size:clamp(76px,22vw,300px);line-height:.85;letter-spacing:-.02em;position:relative;color:var(--paper);text-shadow:6px 6px 0 var(--red),12px 12px 0 var(--blue)}
+h1 .o{color:transparent;-webkit-text-stroke:3px var(--acid);text-shadow:none}
+h1:hover{animation:glitch .35s steps(2) 2}
+@keyframes glitch{0%{transform:translate(0)}25%{transform:translate(-6px,3px) skewX(4deg)}50%{transform:translate(6px,-3px)}75%{transform:translate(-3px,-3px) skewX(-4deg)}100%{transform:translate(0)}}
+.sub{font-family:var(--f-head);font-weight:700;font-size:clamp(16px,2.6vw,30px);margin:28px auto 36px;max-width:820px;text-transform:uppercase}
+.sub b{background:var(--red);padding:0 10px;display:inline-block;transform:skew(-8deg)}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{font-family:var(--f-head);font-weight:900;text-transform:uppercase;font-size:14px;padding:18px 28px;border:3px solid var(--ink);background:var(--acid);color:var(--ink);box-shadow:7px 7px 0 var(--paper);transition:.15s;display:inline-flex;gap:10px;align-items:center}
+.btn:hover{transform:translate(4px,4px);box-shadow:3px 3px 0 var(--paper)}
+.btn.alt{background:var(--red);color:var(--paper);border-color:var(--paper);box-shadow:7px 7px 0 var(--acid)}
+.btn.alt:hover{box-shadow:3px 3px 0 var(--acid)}
+.coin{position:absolute;font-family:var(--f-mono);display:grid;place-items:center;width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff2a8,var(--gold) 55%,#b8860b);color:#7a5200;font-size:calc(var(--s)*.5);border:4px solid #8a6000;animation:float var(--d) ease-in-out infinite;box-shadow:inset 0 0 0 4px rgba(255,255,255,.25),0 10px 30px rgba(0,0,0,.5)}
+@keyframes float{0%,100%{transform:translateY(0) rotateY(0)}50%{transform:translateY(-34px) rotateY(180deg)}}
+
+/* MARQUEE */
+.tape{position:relative;z-index:5;margin:-60px -5vw 0;transform:rotate(-2.5deg);background:var(--acid);color:var(--ink);border-block:4px solid var(--ink);overflow:hidden;white-space:nowrap;box-shadow:0 12px 0 var(--red)}
+.tape.two{transform:rotate(1.8deg);background:var(--red);color:var(--paper);margin-top:-18px;box-shadow:0 12px 0 var(--blue);z-index:4}
+.track{display:inline-block;padding:14px 0;font-family:var(--f-mono);font-size:clamp(18px,3vw,34px);animation:marq 22s linear infinite}
+.two .track{animation-direction:reverse;animation-duration:28s}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:clamp(70px,10vw,140px) clamp(16px,5vw,70px);position:relative}
+h2{font-family:var(--f-mono);font-size:clamp(34px,7vw,92px);line-height:.95;text-transform:uppercase;margin-bottom:14px}
+h2 em{font-style:normal;color:var(--acid)}
+.lead{font-size:clamp(15px,1.8vw,20px);max-width:620px;opacity:.85;margin-bottom:50px}
+.reveal{opacity:0;transform:translateY(50px) rotate(1deg);transition:.8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* BANKNOTE */
+.note-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center;max-width:1250px;margin:auto}
+@media(max-width:900px){.note-wrap{grid-template-columns:1fr}}
+.stage{perspective:1000px}
+.note{position:relative;aspect-ratio:2.2/1;border-radius:14px;border:6px double #063d20;color:#06361c;overflow:hidden;transition:transform .12s;transform-style:preserve-3d;
+  background:
+   radial-gradient(circle at 18% 50%,rgba(255,255,255,.55) 0 22%,transparent 23%),
+   repeating-radial-gradient(circle at 80% 50%,rgba(6,61,32,.18) 0 2px,transparent 2px 7px),
+   repeating-linear-gradient(45deg,rgba(6,61,32,.1) 0 3px,transparent 3px 8px),
+   linear-gradient(120deg,#9fe0a8,#5ec27a 45%,#b6eab0);
+  box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 4px var(--acid)}
+.note::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 48%,transparent 66%);transform:translateX(-120%);animation:shine 4s infinite}
+@keyframes shine{60%,100%{transform:translateX(120%)}}
+.note .portrait{position:absolute;left:5%;top:50%;transform:translateY(-50%);width:26%;aspect-ratio:1;border-radius:50%;border:4px solid #063d20;background:#e9ffe9;display:grid;place-items:center;font-size:clamp(34px,6vw,76px)}
+.note .big{position:absolute;right:6%;top:8%;font-family:var(--f-mono);font-size:clamp(28px,6vw,80px);text-align:right;line-height:1;text-shadow:2px 2px 0 rgba(255,255,255,.5)}
+.note .big small{display:block;font-size:.3em;letter-spacing:.2em;font-family:var(--f-head)}
+.note .name{position:absolute;left:34%;bottom:10%;font-family:var(--f-head);font-weight:900;font-size:clamp(9px,1.5vw,18px);text-transform:uppercase;letter-spacing:.08em}
+.note .ser{position:absolute;right:5%;bottom:8%;font-family:var(--f-mono);font-size:clamp(9px,1.4vw,16px);color:#a1121b}
+.note .corner{position:absolute;font-family:var(--f-mono);font-size:clamp(12px,2vw,22px)}
+.corner.tl{left:3%;top:5%}.corner.bl{left:3%;bottom:5%}
+.facts{display:grid;gap:14px}
+.fact{border:3px solid var(--paper);padding:16px 20px;display:flex;gap:16px;align-items:center;font-weight:800;font-size:clamp(15px,1.8vw,19px);background:rgba(255,255,255,.04);transition:.2s}
+.fact:hover{background:var(--acid);color:var(--ink);transform:translateX(12px) rotate(-1deg)}
+.fact i{font-style:normal;font-size:28px}
+
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:1250px;margin:auto}
+.card{position:relative;min-height:320px;padding:28px;border:4px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:.25s;box-shadow:10px 10px 0 var(--paper);color:var(--ink)}
+.card:nth-child(1){background:var(--acid)}.card:nth-child(2){background:#ff9ad5}.card:nth-child(3){background:var(--gold)}.card:nth-child(4){background:#7fd3ff}
+.card:hover{transform:translate(-6px,-10px) rotate(-1.5deg);box-shadow:18px 18px 0 var(--red)}
+.card .ico{font-size:72px;transition:.4s}.card:hover .ico{transform:rotate(-20deg) scale(1.25)}
+.card h3{font-family:var(--f-mono);font-size:clamp(22px,2.4vw,30px);text-transform:uppercase;line-height:1}
+.card p{font-weight:700;margin-top:8px}
+.price{font-family:var(--f-mono);font-size:30px;margin-top:14px;display:block}
+.num{position:absolute;right:14px;top:6px;font-family:var(--f-mono);font-size:90px;opacity:.15}
+
+/* RATING */
+.rating{background:var(--paper);color:var(--ink);text-align:center;overflow:hidden}
+.rating::before{content:"₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $ ₸ $";position:absolute;inset:0;font-family:var(--f-mono);font-size:80px;line-height:1.1;word-spacing:30px;opacity:.06;transform:rotate(-8deg) scale(1.4);pointer-events:none}
+.score{font-family:var(--f-mono);font-size:clamp(110px,26vw,380px);line-height:.9;color:var(--red);text-shadow:8px 8px 0 var(--ink);position:relative}
+.stars{font-size:clamp(30px,6vw,64px);letter-spacing:.1em;color:var(--gold);-webkit-text-stroke:2px var(--ink);position:relative}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:34px;position:relative}
+.stat{background:var(--ink);color:var(--acid);padding:16px 26px;font-family:var(--f-head);font-weight:900;text-transform:uppercase;font-size:clamp(12px,1.6vw,17px);transform:rotate(var(--r));box-shadow:6px 6px 0 var(--red)}
+.stat b{font-family:var(--f-mono);font-size:1.8em;display:block;color:var(--paper)}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;max-width:1250px;margin:auto;counter-reset:s}
+.step{position:relative;padding:60px 26px 28px;border:3px dashed var(--acid);counter-increment:s;transition:.3s}
+.step::before{content:counter(s);position:absolute;top:-34px;left:20px;font-family:var(--f-mono);font-size:80px;color:var(--red);text-shadow:4px 4px 0 var(--paper)}
+.step:hover{border-style:solid;background:rgba(200,255,0,.08);transform:scale(1.03)}
+.step h3{font-family:var(--f-head);font-weight:900;text-transform:uppercase;font-size:20px;margin-bottom:8px}
+
+/* HOURS */
+.hours{background:linear-gradient(135deg,var(--blue),#0c1a8a);text-align:center}
+.clock{display:grid;grid-template-columns:repeat(24,1fr);gap:4px;max-width:1100px;margin:34px auto 12px}
+.clock span{height:clamp(40px,7vw,80px);background:rgba(255,255,255,.15);border-radius:4px;transition:.3s}
+.clock span.on{background:var(--acid);box-shadow:0 0 18px rgba(200,255,0,.6)}
+.clock span.now{background:var(--red);transform:scaleY(1.35);box-shadow:0 0 22px var(--red)}
+.scale{display:flex;justify-content:space-between;max-width:1100px;margin:auto;font-family:var(--f-mono);font-size:13px}
+.hours .big{font-family:var(--f-mono);font-size:clamp(40px,9vw,120px);line-height:1}
+
+/* FIND */
+.find{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1250px;margin:auto;align-items:stretch}
+@media(max-width:900px){.find{grid-template-columns:1fr}}
+.addr{border:4px solid var(--acid);padding:34px;display:flex;flex-direction:column;gap:18px;justify-content:center;background:rgba(0,0,0,.4)}
+.addr .a{font-family:var(--f-mono);font-size:clamp(24px,3.6vw,44px);line-height:1.05}
+.radar{position:relative;min-height:340px;border:4px solid var(--paper);border-radius:24px;overflow:hidden;background:#071a0e;
+  background-image:linear-gradient(rgba(45,255,110,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(45,255,110,.2) 1px,transparent 1px);background-size:34px 34px}
+.radar::before{content:"";position:absolute;left:50%;top:50%;width:200%;height:200%;background:conic-gradient(from 0deg,rgba(45,255,110,.55),transparent 25%);transform-origin:0 0;animation:sweep 3.5s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);font-size:64px;filter:drop-shadow(0 8px 0 rgba(0,0,0,.5));animation:bob 1.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,-125%)}}
+.radar .tag{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);background:var(--acid);color:var(--ink);font-family:var(--f-mono);padding:8px 16px;white-space:nowrap}
+
+/* FINAL */
+.final{text-align:center;background:var(--red);color:var(--paper);overflow:hidden}
+.final h2{font-size:clamp(40px,10vw,150px);text-shadow:6px 6px 0 var(--ink)}
+.final .btn{background:var(--paper);box-shadow:7px 7px 0 var(--ink);font-size:clamp(14px,2vw,22px);padding:24px 40px}
+footer{padding:30px 20px 100px;text-align:center;font-size:12px;opacity:.6;font-family:var(--f-head)}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#04230f;font-family:var(--f-head);font-weight:900;font-size:13px;padding:16px 22px;border-radius:99px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);display:flex;gap:8px;align-items:center;animation:wob 3s infinite}
+@keyframes wob{0%,90%,100%{transform:rotate(0)}93%{transform:rotate(-6deg)}96%{transform:rotate(6deg)}}
+.burst{position:fixed;pointer-events:none;z-index:200;font-family:var(--f-mono);color:var(--gold);font-size:26px;text-shadow:2px 2px 0 #000}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#top" class="logo">БАКС<span>✂</span></a>
+  <nav><a href="#price">Цены</a><a href="#services">Услуги</a><a href="#rating">Рейтинг</a><a href="#find">Адрес</a></nav>
+  <span class="pill" id="status"><i class="dot"></i><span id="statusText">Работаем</span></span>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="pole l"></div><div class="pole r"></div>
+  <div class="coin" style="--s:90px;--d:4s;left:14%;top:26%">₸</div>
+  <div class="coin" style="--s:60px;--d:3.2s;right:16%;top:22%">$</div>
+  <div class="coin" style="--s:120px;--d:5s;right:12%;bottom:18%">₸</div>
+  <div class="coin" style="--s:50px;--d:2.8s;left:18%;bottom:20%">$</div>
+  <div style="position:relative;z-index:2">
+    <span class="kicker">★ Барбершоп · Астана · ЖК «Азия плюс» ★</span>
+    <h1>БА<span class="o">К</span>С</h1>
+    <p class="sub">Стрижка, за которую <b>не жалко</b> ни одного бакса</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/77018200555?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%91%D0%B0%D0%BA%D1%81." target="_blank" rel="noopener">💬 Записаться в WhatsApp</a>
+      <a class="btn alt" href="#price">💰 Сколько стоит?</a>
+    </div>
+  </div>
+</div>
+
+<div class="tape"><div class="track" id="t1"></div></div>
+<div class="tape two"><div class="track" id="t2"></div></div>
+
+<section id="price">
+  <div class="note-wrap">
+    <div class="stage reveal">
+      <div class="note" id="note">
+        <span class="corner tl">3000</span><span class="corner bl">3000</span>
+        <div class="portrait">✂️</div>
+        <div class="big"><small>СТРИЖКА ОТ</small>3000 ₸</div>
+        <div class="name">Барбершоп Бакс · Астана</div>
+        <div class="ser">№ 0916А</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <h2>Одна <em>купюра</em> — один образ</h2>
+      <p class="lead">Мужская стрижка от 3000 ₸. Без сюрпризов и «ой, а это ещё доплата» — цену уточняй при записи.</p>
+      <div class="facts">
+        <div class="fact"><i>✂️</i>Мужская стрижка — от 3000 ₸</div>
+        <div class="fact"><i>🧒</i>Детская стрижка для маленьких клиентов</div>
+        <div class="fact"><i>🏠</i>Выезд на дом — приедем сами</div>
+        <div class="fact"><i>📶</i>Wi-Fi для клиентов, пока ты прекрасен</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="reveal">Что <em>умеем</em></h2>
+  <p class="lead reveal">Четыре причины прийти в «Бакс» — и ни одной, чтобы уйти недовольным.</p>
+  <div class="grid">
+    <article class="card reveal"><span class="num">01</span><div class="ico">✂️</div><div><h3>Мужская стрижка</h3><p>Классика, фейд, андеркат — выйдешь с нужной головой.</p><span class="price">от 3000 ₸</span></div></article>
+    <article class="card reveal"><span class="num">02</span><div class="ico">🧒</div><div><h3>Детская стрижка</h3><p>Аккуратно, без слёз и с настоящим барбершоп-вайбом.</p><span class="price">Уточняй в WhatsApp</span></div></article>
+    <article class="card reveal"><span class="num">03</span><div class="ico">🚗</div><div><h3>Выезд на дом</h3><p>Не хочешь никуда ехать? Барбер приедет к тебе.</p><span class="price">По записи</span></div></article>
+    <article class="card reveal"><span class="num">04</span><div class="ico">📶</div><div><h3>Wi-Fi и комфорт</h3><p>Ответь на все письма, пока тебя приводят в форму.</p><span class="price">Бесплатно</span></div></article>
+  </div>
+</section>
+
+<section class="rating" id="rating">
+  <h2 class="reveal" style="position:relative">Люди <em style="color:var(--red)">голосуют</em> рейтингом</h2>
+  <div class="score" id="score">4.9</div>
+  <div class="stars">★★★★★</div>
+  <div class="stats">
+    <div class="stat" style="--r:-3deg"><b>107</b>оценок в 2ГИС</div>
+    <div class="stat" style="--r:2deg"><b>83</b>отзыва</div>
+    <div class="stat" style="--r:-1.5deg"><b>09–24</b>каждый день</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="reveal">Три шага <em>до огня</em></h2>
+  <p class="lead reveal">Проще, чем разменять тысячу.</p>
+  <div class="steps">
+    <div class="step reveal"><h3>Пишешь нам</h3><p>Один клик на WhatsApp — и мы на связи.</p></div>
+    <div class="step reveal"><h3>Выбираешь время</h3><p>Работаем по записи с 09:00 до 24:00, даже поздно вечером.</p></div>
+    <div class="step reveal"><h3>Выходишь легендой</h3><p>Свежая стрижка, ровная линия, уверенный взгляд.</p></div>
+  </div>
+</section>
+
+<section class="hours">
+  <div class="big reveal">09:00 — 24:00</div>
+  <p class="lead reveal" style="margin:10px auto 0">Ежедневно, по предварительной записи. Красным — прямо сейчас в Астане.</p>
+  <div class="clock" id="clock"></div>
+  <div class="scale"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+</section>
+
+<section id="find">
+  <div class="find">
+    <div class="addr reveal">
+      <h2 style="font-size:clamp(30px,5vw,60px)">Где нас <em>искать</em></h2>
+      <div class="a">Улица Жумекен Нажимеденов, 16а</div>
+      <p style="font-weight:800">ЖК «Азия плюс» · Сарайшык район · Астана</p>
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn" href="https://2gis.kz/astana/directions/points/%7C71.476825%2C51.117551%3B70000001112607806" target="_blank" rel="noopener">🧭 Маршрут в 2ГИС</a>
+        <a class="btn alt" href="https://2gis.kz/astana/firm/70000001112607806" target="_blank" rel="noopener">⭐ Отзывы</a>
+      </div>
+    </div>
+    <div class="radar reveal"><div class="pin">📍</div><div class="tag">МЫ ЗДЕСЬ</div></div>
+  </div>
+</section>
+
+<section class="final">
+  <h2 class="reveal">Твоя голова — лучшая инвестиция</h2>
+  <a class="btn reveal" href="https://wa.me/77018200555?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20%D0%91%D0%B0%D0%BA%D1%81." target="_blank" rel="noopener">Записаться: +7 701 820 05 55</a>
+</section>
+</main>
+
+<footer>БАКС · БАРБЕРШОП · АСТАНА · Данные из карточки 2ГИС</footer>
+
+<a class="fab" href="https://wa.me/77018200555" target="_blank" rel="noopener">💬 Записаться</a>
+
+<script>
+// ticker
+const words=["СТРИЖКА ОТ 3000 ₸","ВЫЕЗД НА ДОМ","ДЕТСКАЯ СТРИЖКА","WI-FI","09:00–24:00","РЕЙТИНГ 4.9"];
+const line=words.map(w=>w+" ✦ ").join("");
+["t1","t2"].forEach(id=>{document.getElementById(id).textContent=(line+" ").repeat(6)});
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+
+// open now (Astana time)
+function astanaHour(){
+  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Almaty',hour:'2-digit',hour12:false}).format(new Date());
+  return parseInt(p,10)%24;
+}
+const clock=document.getElementById('clock');
+for(let h=0;h<24;h++){const s=document.createElement('span');if(h>=9)s.className='on';s.title=h+':00';clock.appendChild(s)}
+function upd(){
+  const h=astanaHour(),open=h>=9;
+  const st=document.getElementById('status');
+  st.classList.toggle('open',open);
+  document.getElementById('statusText').textContent=open?'Открыто сейчас':'Откроемся в 09:00';
+  [...clock.children].forEach((s,i)=>s.classList.toggle('now',i===h));
+}
+upd();setInterval(upd,60000);
+
+// banknote tilt
+const note=document.getElementById('note');
+note.parentElement.addEventListener('mousemove',e=>{
+  const r=note.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  note.style.transform=`rotateY(${x*24}deg) rotateX(${-y*24}deg)`;
+});
+note.parentElement.addEventListener('mouseleave',()=>note.style.transform='');
+
+// rating count-up
+const sc=document.getElementById('score');
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){let t=0;const id=setInterval(()=>{t+=.1;sc.textContent=Math.min(t,4.9).toFixed(1);if(t>=4.9)clearInterval(id)},25);o.disconnect()}},{threshold:.4}).observe(sc);
+
+// coin burst on click
+document.addEventListener('click',e=>{
+  for(let i=0;i<9;i++){
+    const c=document.createElement('div');c.className='burst';c.textContent=Math.random()>.5?'₸':'$';
+    c.style.left=e.clientX+'px';c.style.top=e.clientY+'px';document.body.appendChild(c);
+    const a=Math.random()*Math.PI*2,d=60+Math.random()*90;
+    c.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d+60}px) scale(.4) rotate(360deg)`,opacity:0}],{duration:800,easing:'ease-out'}).onfinish=()=>c.remove();
+  }
+});
+</script>
+</body>
+</html>
